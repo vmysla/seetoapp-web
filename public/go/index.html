@@ -1,0 +1,81 @@
+<html>
+	<head>
+
+		<style>
+		body {
+			background: black;
+			padding: 0;
+			margin: 0;
+		}
+        
+        .unmute {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            z-index: 100;
+            cursor: pointer;
+            background-color: #FFF;
+            border: none;
+            border-radius: 50%;
+            font-size: 100px;
+            padding: 10px;
+        }
+
+        .yes-no {
+        	position:  absolute;
+        	bottom:  150px;
+        	width: 100%;
+        	text-align: center;
+        }
+
+        .yes, .no {
+			padding: 30px 50px;
+			margin:  10px 20px;
+			border: none;
+			border-radius: 50%;
+			color: white;
+			background-color: #24363a;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 140px;
+			text-align: center;
+			cursor: pointer;
+			transition: transform 0.1s ease;
+		}
+
+
+		.yes {
+		  color: #4CAF50;
+		}
+
+		.no {
+		  color: #F44336; 
+		}
+
+    	</style>
+	</head>
+	<body>
+		<div class="video">
+			<video id="player" autoplay muted loop src="https://d2m035we9nk3y0.cloudfront.net/bd7788aa-9f81-4c02-acf2-34e5d135acdb_ProfileVideo.mp4" width="100%"></video>
+		</div>
+		<button class="unmute" onclick="toggleMute()">🔇</button>
+		<div class="yes-no">
+			<span class="yes">✔</span>
+			<span class="no">✖</span>
+		</div>
+		<script>
+		    function toggleMute() {
+		        var video = document.getElementById("player");
+		        var button = document.querySelector(".unmute");
+		        if (video.muted) {
+		            video.muted = false;
+		            button.textContent = '🔊';
+		        } else {
+		            video.muted = true;
+		            button.textContent = '🔇';
+		        }
+		    }
+		</script>
+
+	</body>
+</html>
