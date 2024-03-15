@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [ "CDKM6994Z2.com.Seeto.app"],
+        "components": [
+          {
+            "/": "/go/*",
+            "comment": "Matches any URL with a path that starts with /buy/."
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [ "CDKM6994Z2.com.Seeto.app" ]
+  }
+}
